@@ -1,4 +1,4 @@
-// student_view.js
+
 
 function getParam(name) {
   return new URLSearchParams(window.location.search).get(name);
@@ -14,7 +14,7 @@ if (quizId) {
   }
 }
 
-// Fallback for legacy questions.js
+
 if (!quiz && typeof questionBank !== 'undefined') {
   quiz = {
     id: 'legacy', title: 'Quiz',
@@ -34,13 +34,13 @@ if (!quiz) {
   throw new Error('No quiz found');
 }
 
-// Populate entry screen
+
 document.getElementById('quizTitleDisplay').textContent = quiz.title;
 document.getElementById('quizMetaDisplay').textContent  =
   quiz.questions.length + ' questions  ·  ' + quiz.timer + ' minutes' +
   (quiz.subject ? '  ·  ' + quiz.subject : '');
 
-// ── Shuffle helper ──
+
 function shuffleArray(arr) {
   var a = arr.slice();
   for (var i = a.length - 1; i > 0; i--) {
@@ -73,11 +73,11 @@ function startQuiz() {
   document.getElementById('nameScreen').classList.add('hidden');
   document.getElementById('quizScreen').classList.remove('hidden');
 
-  // Populate left panel
+
   document.getElementById('qlpTitle').textContent   = quiz.title;
   document.getElementById('qlpStudent').textContent = 'Student: ' + studentName;
 
-  // Timer
+
   secondsLeft   = quiz.timer * 60;
   updateTimerDisplay();
   timerInterval = setInterval(function() {
@@ -104,15 +104,15 @@ function updateTimerDisplay() {
 function loadQuestion(index) {
   var q = quizData[index];
 
-  // Left panel progress
+
   var pct = Math.round(((index + 1) / quizData.length) * 100);
   document.getElementById('progressFill').style.width  = pct + '%';
   document.getElementById('questionCounter').textContent = 'Question ' + (index+1) + ' of ' + quizData.length;
 
-  // Question text
+
   document.getElementById('questionText').textContent = q.question;
 
-  // Options
+
   var list = document.getElementById('optionsList');
   list.innerHTML = '';
 
@@ -140,7 +140,7 @@ function loadQuestion(index) {
     list.appendChild(li);
   });
 
-  // Nav buttons
+
   var prevBtn = document.getElementById('prevBtn');
   prevBtn.disabled = (index === 0);
 
@@ -192,7 +192,7 @@ function submitQuiz() {
   else if (percent >= 55) rank = 'B';
   else if (percent >= 40) rank = 'C';
 
-  // Save result
+
   var result = {
     quizId: quiz.id, studentName: studentName,
     correct: correct, incorrect: incorrect, unanswered: unanswered,
@@ -203,7 +203,7 @@ function submitQuiz() {
   results.push(result);
   localStorage.setItem('quizcraft_results', JSON.stringify(results));
 
-  // Populate score screen
+
   document.getElementById('scoreHeading').textContent     = studentName + "'s Results";
   document.getElementById('scoreStudentName').textContent = studentName;
   document.getElementById('rankBadge').textContent        = rank;
@@ -212,7 +212,7 @@ function submitQuiz() {
   document.getElementById('partialCount').textContent     = unanswered;
   document.getElementById('totalMarks').textContent       = totalMarks + ' / ' + maxMarks;
 
-  // Answer review
+
   if (quiz.showAnswers) {
     var reviewSection = document.getElementById('answersReview');
     var reviewList    = document.getElementById('answersReviewList');
@@ -233,7 +233,7 @@ function submitQuiz() {
     });
   }
 
-  // Switch screens
+
   document.getElementById('quizScreen').classList.add('hidden');
   document.getElementById('scoreScreen').classList.remove('hidden');
 }

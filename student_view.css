@@ -1,4 +1,4 @@
-/* student_view.css */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -9,7 +9,7 @@ html, body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
-/* ─── Entry / name screen ─── */
+
 .entry-layout {
   display: flex;
   min-height: 100vh;
@@ -172,13 +172,13 @@ html, body {
   box-shadow: 0 4px 16px rgba(2,132,199,0.3);
 }
 
-/* ─── Quiz screen ─── */
+
 .quiz-layout {
   display: flex;
   min-height: 100vh;
 }
 
-/* Left info panel */
+
 .quiz-left-panel {
   width: 280px;
   flex-shrink: 0;
@@ -213,7 +213,7 @@ html, body {
   font-weight: 500;
 }
 
-/* Timer */
+
 .timer-box {
   background: rgba(255,255,255,0.12);
   border: 1px solid rgba(255,255,255,0.2);
@@ -244,7 +244,7 @@ html, body {
 .timer-box.warning .timer-value { color: #fde68a; }
 .timer-box.danger  .timer-value { color: #fca5a5; }
 
-/* Progress */
+
 .qlp-progress-wrap { display: flex; flex-direction: column; gap: 8px; }
 
 .qlp-progress-bar {
@@ -267,7 +267,7 @@ html, body {
   font-weight: 500;
 }
 
-/* Legend */
+
 .qlp-legend {
   display: flex;
   align-items: center;
@@ -285,7 +285,7 @@ html, body {
 .legend-dot.answered   { background: #86efac; }
 .legend-dot.unanswered { background: rgba(255,255,255,0.3); }
 
-/* Right question area */
+
 .quiz-right-area {
   flex: 1;
   background: #f0f9ff;
@@ -376,7 +376,7 @@ html, body {
 .btn-submit { background: #0284C7; color: #fff; }
 .btn-submit:hover:not(:disabled) { background: #0369a1; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(2,132,199,0.28); }
 
-/* ─── Score screen ─── */
+
 .score-layout {
   display: flex;
   min-height: 100vh;
@@ -515,7 +515,7 @@ html, body {
 
 .hidden { display: none; }
 
-/* ─── Responsive ─── */
+
 @media (max-width: 860px) {
   .entry-layout, .quiz-layout, .score-layout { flex-direction: column; }
 

@@ -1,4 +1,4 @@
-// login.js
+
 
 function switchTab(tab) {
   document.getElementById('loginForm').classList.toggle('hidden', tab !== 'login');
@@ -34,14 +34,14 @@ function doLogin() {
     return;
   }
 
-  // Save session
+
   localStorage.setItem('quizcraft_session', JSON.stringify({ name: found.name, email: found.email, role: found.role }));
   errEl.classList.add('hidden');
 
   if (role === 'teacher') {
     window.location.href = 'teacher_dashboard.html';
   } else {
-    // Students come here only via direct link; redirect to home or quiz
+
     window.location.href = 'contact.html';
   }
 }
@@ -82,6 +82,6 @@ function doRegister() {
   localStorage.setItem('quizcraft_users', JSON.stringify(users));
 
   okEl.classList.remove('hidden');
-  // Switch to login tab after short delay
+
   setTimeout(function() { switchTab('login'); }, 1200);
 }

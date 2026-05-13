@@ -1,4 +1,4 @@
-// generate_link.js
+
 
 var session = JSON.parse(localStorage.getItem('quizcraft_session') || 'null');
 if (!session || session.role !== 'teacher') {
@@ -10,7 +10,7 @@ function logout() {
   window.location.href = 'login.html';
 }
 
-// Get quiz id from URL
+
 function getParam(name) {
   var params = new URLSearchParams(window.location.search);
   return params.get(name);
@@ -34,7 +34,7 @@ if (!quiz) {
   window.location.href = 'teacher_dashboard.html';
 }
 
-// Build the student link
+
 var baseUrl = window.location.href.replace(/generate_link\.html.*/, '');
 var studentLink = baseUrl + 'student_view.html?quiz=' + quizId;
 
@@ -44,7 +44,7 @@ document.getElementById('quizMeta').textContent =
 
 document.getElementById('linkInput').value = studentLink;
 
-// Quiz info cards
+
 var infoGrid = document.getElementById('quizInfoGrid');
 var infoItems = [
   { label: 'Title', value: quiz.title },

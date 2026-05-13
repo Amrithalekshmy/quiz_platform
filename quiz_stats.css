@@ -1,4 +1,4 @@
-/* quiz_stats.css */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -80,7 +80,7 @@ body {
   margin-top: 6px;
 }
 
-/* Summary cards */
+
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -113,7 +113,7 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* Table */
+
 .section-title {
   font-size: 1.08rem;
   font-weight: 700;
@@ -178,7 +178,7 @@ body {
   text-align: center;
 }
 
-/* Quiz pick list */
+
 .quiz-pick-card {
   background: #fff;
   border-radius: 14px;

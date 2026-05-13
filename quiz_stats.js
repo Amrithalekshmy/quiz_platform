@@ -1,4 +1,4 @@
-// quiz_stats.js
+
 
 var session = JSON.parse(localStorage.getItem('quizcraft_session') || 'null');
 if (!session || session.role !== 'teacher') {
@@ -21,7 +21,7 @@ var allQuizzes = JSON.parse(localStorage.getItem('quizcraft_quizzes') || '[]');
 var myQuizzes = allQuizzes.filter(function(q) { return q.teacherEmail === session.email; });
 
 if (!quizId) {
-  // Show quiz picker
+
   document.getElementById('statsTitle').textContent = 'Quiz Statistics';
   document.getElementById('statsSubtitle').textContent = 'Select a quiz to view results.';
   document.getElementById('quizPickSection').classList.remove('hidden');
@@ -49,7 +49,7 @@ if (!quizId) {
   }
 
 } else {
-  // Show stats for this quiz
+
   var quiz = null;
   for (var i = 0; i < allQuizzes.length; i++) {
     if (allQuizzes[i].id === quizId) { quiz = allQuizzes[i]; break; }
@@ -65,7 +65,7 @@ if (!quizId) {
     var allResults = JSON.parse(localStorage.getItem('quizcraft_results') || '[]');
     var results = allResults.filter(function(r) { return r.quizId === quizId; });
 
-    // Summary
+
     var totalAttempts = results.length;
     var avgScore = 0;
     var highest = 0;
@@ -96,7 +96,7 @@ if (!quizId) {
       summaryGrid.appendChild(div);
     });
 
-    // Table
+
     if (results.length === 0) {
       document.getElementById('noResultsMsg').classList.remove('hidden');
     } else {
@@ -104,7 +104,7 @@ if (!quizId) {
       table.classList.remove('hidden');
       var tbody = document.getElementById('statsTableBody');
 
-      // Sort by percent descending
+
       var sorted = results.slice().sort(function(a, b) { return b.percent - a.percent; });
 
       sorted.forEach(function(r, idx) {

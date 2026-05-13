@@ -1,4 +1,4 @@
-/* login.css */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -34,7 +34,7 @@ body {
   border: 1px solid rgba(200, 200, 220, 0.45);
 }
 
-/* Brand */
+
 .brand {
   text-align: center;
   margin-bottom: 38px;
@@ -59,7 +59,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* Tabs */
+
 .tab-row {
   display: flex;
   background: #f1f5f9;
@@ -88,7 +88,7 @@ body {
   box-shadow: 0 1px 6px rgba(0,0,0,0.1);
 }
 
-/* Form */
+
 .form-group {
   margin-bottom: 22px;
 }
@@ -121,7 +121,7 @@ body {
   box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
 }
 
-/* Button */
+
 .btn-primary {
   width: 100%;
   padding: 14px;
@@ -144,7 +144,7 @@ body {
   box-shadow: 0 4px 16px rgba(2, 132, 199, 0.3);
 }
 
-/* Messages */
+
 .error-msg {
   font-size: 0.9rem;
   color: #dc2626;

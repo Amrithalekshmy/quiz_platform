@@ -1,4 +1,4 @@
-/* personalisation.css */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -126,7 +126,7 @@ body {
   gap: 18px;
 }
 
-/* Toggle */
+
 .toggle-row {
   display: flex;
   align-items: center;
@@ -174,7 +174,7 @@ body {
   color: #475569;
 }
 
-/* Button */
+
 .btn-primary {
   width: 100%;
   padding: 14px;

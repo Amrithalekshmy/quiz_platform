@@ -1,4 +1,4 @@
-// teacher_dashboard.js
+
 
 var session = JSON.parse(localStorage.getItem('quizcraft_session') || 'null');
 if (!session || session.role !== 'teacher') {
@@ -20,7 +20,7 @@ function loadQuizList() {
   var myIds      = mine.map(function(q) { return q.id; });
   var myResults  = allResults.filter(function(r) { return myIds.indexOf(r.quizId) !== -1; });
 
-  // Hero stats
+
   document.getElementById('statQuizzes').textContent  = mine.length;
   document.getElementById('statAttempts').textContent = myResults.length;
 

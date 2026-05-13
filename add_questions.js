@@ -1,4 +1,4 @@
-// add_questions.js
+
 
 var session = JSON.parse(localStorage.getItem('quizcraft_session') || 'null');
 if (!session || session.role !== 'teacher') {
@@ -22,21 +22,21 @@ function logout() {
 }
 
 function updateUI() {
-  // Subtitle + counter
+  
   document.getElementById('pageSubtitle').textContent = 'Question ' + (currentQ + 1) + ' of ' + totalQ;
   document.getElementById('formCounter').textContent  = 'Question ' + (currentQ + 1);
 
-  // Progress
+
   var donePct = Math.round((savedQuestions.filter(function(q){ return q !== null; }).length / totalQ) * 100);
   document.getElementById('progressFill').style.width = donePct + '%';
   document.getElementById('progressLabel').textContent = donePct + '% complete';
 
-  // Buttons
+
   document.getElementById('prevQBtn').disabled = (currentQ === 0);
   var isLast = (currentQ === totalQ - 1);
   document.getElementById('nextQBtn').textContent = isLast ? 'Finish & Generate Link →' : 'Save & Next →';
 
-  // Restore saved values
+
   var saved = savedQuestions[currentQ];
   document.getElementById('questionText').value = saved ? saved.question : '';
   ['opt0','opt1','opt2','opt3'].forEach(function(id, i) {
@@ -92,7 +92,7 @@ function trySaveCurrent(required) {
   var correctIdx   = correctRadio ? parseInt(correctRadio.value) : -1;
   var errEl        = document.getElementById('qError');
 
-  // Completely empty and not required — allow navigation
+
   if (!required && !qtext && opts.every(function(o){ return !o; }) && correctIdx === -1) {
     return true;
   }
@@ -118,7 +118,7 @@ function nextOrFinish() {
     return;
   }
 
-  // Check nothing missing
+
   var missing = [];
   for (var i = 0; i < totalQ; i++) {
     if (!savedQuestions[i]) missing.push(i + 1);
@@ -130,7 +130,7 @@ function nextOrFinish() {
     return;
   }
 
-  // Build and save quiz
+
   var quizId    = 'quiz_' + Date.now() + '_' + Math.floor(Math.random() * 10000);
   var questions = savedQuestions.map(function(q) {
     return {

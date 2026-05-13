@@ -1,4 +1,4 @@
-/* teacher_dashboard.css */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
 }
 
-/* ─── Navbar ─── */
+
 .navbar {
   background: #fff;
   border-bottom: 1px solid #e2e8f0;
@@ -53,7 +53,7 @@ body {
 }
 .nav-link:hover { color: #0284C7; }
 
-/* The ONE create quiz button */
+
 .nav-create {
   padding: 9px 22px;
   background: #0284C7;
@@ -87,7 +87,7 @@ body {
 }
 .nav-logout:hover { border-color: #dc2626; color: #dc2626; }
 
-/* ─── Hero ─── */
+
 .hero-strip {
   background: linear-gradient(135deg, #0369a1 0%, #0284C7 45%, #0ea5e9 100%);
   padding: 60px 52px 56px;
@@ -183,7 +183,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* ─── Quizzes section ─── */
+
 .quizzes-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -203,7 +203,7 @@ body {
   color: #1e293b;
 }
 
-/* ─── Empty state ─── */
+
 .empty-state {
   text-align: center;
   padding: 90px 24px;
@@ -235,7 +235,7 @@ body {
   font-weight: 700;
 }
 
-/* ─── Quiz cards grid ─── */
+
 .quiz-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -302,7 +302,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* ─── Small action buttons on quiz cards ─── */
+
 .btn-sm {
   padding: 7px 16px;
   border-radius: 20px;
@@ -318,7 +318,7 @@ body {
 .btn-stats  { background: #ede9fe; color: #7c3aed; }
 .btn-delete { background: #fee2e2; color: #dc2626; }
 
-/* ─── Table (for > 9 quizzes) ─── */
+
 .table-wrap {
   overflow-x: auto;
   border-radius: 16px;
@@ -356,7 +356,7 @@ body {
 
 .hidden { display: none; }
 
-/* ─── Responsive ─── */
+
 @media (max-width: 900px) {
   .navbar { padding: 0 20px; gap: 12px; }
   .nav-right { gap: 12px; }

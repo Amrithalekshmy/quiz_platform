@@ -10,7 +10,7 @@ function logout() {
   window.location.href = 'login.html';
 }
 
-// Update toggle labels on change
+
 document.getElementById('shuffleToggle').addEventListener('change', function() {
   document.getElementById('shuffleLabel').textContent = this.checked
     ? 'Yes – questions will be shuffled'
@@ -42,7 +42,7 @@ function saveAndProceed() {
     return;
   }
 
-  // Save draft settings to localStorage so add_questions page can use them
+
   var draft = {
     title: title,
     subject: subject,

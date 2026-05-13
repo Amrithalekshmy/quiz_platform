@@ -1,4 +1,4 @@
-// contact.js
+
 
 var session = JSON.parse(localStorage.getItem('quizcraft_session') || 'null');
 
@@ -27,7 +27,7 @@ function sendMessage() {
     return;
   }
 
-  // Since there's no backend, just show the confirmation
+
   document.getElementById('sentMsg').classList.remove('hidden');
   document.getElementById('contactName').value = '';
   document.getElementById('contactEmail').value = '';
