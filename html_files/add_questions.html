@@ -16,64 +16,83 @@
     </div>
   </nav>
 
-  <div class="page-wrap">
+  <div class="page-layout">
 
-    <div class="page-header">
-      <h2 id="pageTitle">Add Questions</h2>
-      <p id="pageSubtitle">Question 1 of ?</p>
-    </div>
+    <!-- Left panel -->
+    <aside class="left-panel">
+      <div class="lp-top">
+        <p class="lp-eyebrow">Quiz Builder</p>
+        <h2 id="pageTitle" class="lp-title">Add Questions</h2>
+        <p id="pageSubtitle" class="lp-sub">Question 1 of ?</p>
 
-    <!-- Progress bar -->
-    <div class="progress-bar-wrap">
-      <div class="progress-bar-fill" id="progressFill" style="width: 0%;"></div>
-    </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+        </div>
+        <p class="progress-label" id="progressLabel">0% complete</p>
+      </div>
 
-    <!-- Question card -->
-    <div class="qcard">
+      <div class="lp-list">
+        <p class="lp-list-heading">Questions</p>
+        <ul class="qlist" id="questionList">
+          <li class="qlist-empty">No questions yet.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Right / main area -->
+    <main class="main-area">
+
+      <div class="form-top-row">
+        <span class="form-counter" id="formCounter">Question 1</span>
+        <span class="form-hint">Select the correct answer using the radio button</span>
+      </div>
 
       <div class="form-group">
-        <label>Question Text <span class="req">*</span></label>
+        <label>Question <span class="req">*</span></label>
         <textarea id="questionText" rows="3" placeholder="Type your question here…"></textarea>
       </div>
 
       <div class="options-section">
-        <label class="options-label">Answer Options <span class="req">*</span> <small>(mark the correct one)</small></label>
+        <label class="options-label">Options <span class="req">*</span></label>
 
         <div class="option-row">
-          <input type="radio" name="correctOpt" value="0" id="radio0" />
+          <label class="opt-radio-wrap">
+            <input type="radio" name="correctOpt" value="0" id="radio0" />
+            <span class="opt-letter">A</span>
+          </label>
           <input type="text" class="opt-input" id="opt0" placeholder="Option A" />
         </div>
         <div class="option-row">
-          <input type="radio" name="correctOpt" value="1" id="radio1" />
+          <label class="opt-radio-wrap">
+            <input type="radio" name="correctOpt" value="1" id="radio1" />
+            <span class="opt-letter">B</span>
+          </label>
           <input type="text" class="opt-input" id="opt1" placeholder="Option B" />
         </div>
         <div class="option-row">
-          <input type="radio" name="correctOpt" value="2" id="radio2" />
+          <label class="opt-radio-wrap">
+            <input type="radio" name="correctOpt" value="2" id="radio2" />
+            <span class="opt-letter">C</span>
+          </label>
           <input type="text" class="opt-input" id="opt2" placeholder="Option C" />
         </div>
         <div class="option-row">
-          <input type="radio" name="correctOpt" value="3" id="radio3" />
+          <label class="opt-radio-wrap">
+            <input type="radio" name="correctOpt" value="3" id="radio3" />
+            <span class="opt-letter">D</span>
+          </label>
           <input type="text" class="opt-input" id="opt3" placeholder="Option D" />
         </div>
-        <p class="options-hint">Click the radio button next to the correct answer.</p>
       </div>
 
       <p class="error-msg hidden" id="qError">Please fill in the question, all 4 options, and mark the correct answer.</p>
 
       <div class="btn-row">
         <button class="btn-secondary" id="prevQBtn" onclick="prevQuestion()">← Previous</button>
-        <button class="btn-primary" id="nextQBtn" onclick="nextOrFinish()">Next →</button>
+        <button class="btn-primary"   id="nextQBtn" onclick="nextOrFinish()">Save & Next →</button>
       </div>
 
-    </div>
-
-    <!-- Sidebar: list of added questions -->
-    <div class="qlist-section">
-      <h3 class="section-title">Questions Added</h3>
-      <ul class="qlist" id="questionList">
-        <li class="qlist-empty">No questions yet.</li>
-      </ul>
-    </div>
+    </main>
 
   </div>
 
