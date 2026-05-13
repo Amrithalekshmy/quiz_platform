@@ -161,7 +161,7 @@ body {
   display: inline-block;
 }
 
-/* Quiz info grid */
+
 .quiz-info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
