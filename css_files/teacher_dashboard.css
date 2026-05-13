@@ -1,0 +1,234 @@
+/* teacher_dashboard.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #F0F9FF;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0284C7;
+  letter-spacing: -0.01em;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-user {
+  font-size: 0.93rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.nav-link {
+  font-size: 0.93rem;
+  color: #0284C7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-link:hover { text-decoration: underline; }
+
+.nav-logout {
+  padding: 8px 20px;
+  background: transparent;
+  border: 1.5px solid #0284C7;
+  color: #0284C7;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-logout:hover {
+  background: #0284C7;
+  color: #fff;
+}
+
+/* Dashboard */
+.dashboard-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.dash-header {
+  margin-bottom: 38px;
+}
+
+.dash-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+}
+
+.dash-sub {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+/* Action grid */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-bottom: 48px;
+}
+
+.action-card {
+  background: #fff;
+  border: 1px solid rgba(200,200,220,0.5);
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+  transition: box-shadow 0.18s, transform 0.14s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.action-card:hover {
+  box-shadow: 0 8px 28px rgba(2,132,199,0.13);
+  transform: translateY(-3px);
+}
+
+.action-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.action-info h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.action-info p {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.action-arrow {
+  margin-left: auto;
+  font-size: 1.15rem;
+  color: #0284C7;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Quiz list */
+.quiz-list-section {
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 32px 28px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+  border: 1px solid rgba(200,200,220,0.45);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 18px;
+}
+
+.empty-msg {
+  font-size: 0.97rem;
+  color: #cbd5e1;
+  padding: 32px 0;
+  text-align: center;
+}
+
+.quiz-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.quiz-table th {
+  background: #f8fafc;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.quiz-table td {
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  color: #334155;
+  border-bottom: 1px solid #f8fafc;
+}
+
+.quiz-table tr:last-child td { border-bottom: none; }
+
+.quiz-table tr:hover td { background: #f8fafc; }
+
+.td-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.btn-sm:hover { opacity: 0.8; transform: translateY(-1px); }
+
+.btn-link  { background: #e0f2fe; color: #0284C7; }
+.btn-stats { background: #ede9fe; color: #7c3aed; }
+.btn-delete{ background: #fee2e2; color: #dc2626; }
+
+.hidden { display: none; }
+
+@media (max-width: 640px) {
+  .navbar { padding: 0 18px; }
+  .dashboard-wrap { padding: 30px 16px 56px; }
+  .action-card { padding: 20px 16px; }
+  .quiz-list-section { padding: 22px 16px 20px; }
+}
