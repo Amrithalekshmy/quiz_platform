@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Questions – QuizCraft</title>
+  <link rel="stylesheet" href="add_questions.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand">📝 QuizCraft</div>
+    <div class="nav-right">
+      <a href="personalisation.html" class="nav-link">← Settings</a>
+      <button class="nav-logout" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <h2 id="pageTitle">Add Questions</h2>
+      <p id="pageSubtitle">Question 1 of ?</p>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progressFill" style="width: 0%;"></div>
+    </div>
+
+    <!-- Question card -->
+    <div class="qcard">
+
+      <div class="form-group">
+        <label>Question Text <span class="req">*</span></label>
+        <textarea id="questionText" rows="3" placeholder="Type your question here…"></textarea>
+      </div>
+
+      <div class="options-section">
+        <label class="options-label">Answer Options <span class="req">*</span> <small>(mark the correct one)</small></label>
+
+        <div class="option-row">
+          <input type="radio" name="correctOpt" value="0" id="radio0" />
+          <input type="text" class="opt-input" id="opt0" placeholder="Option A" />
+        </div>
+        <div class="option-row">
+          <input type="radio" name="correctOpt" value="1" id="radio1" />
+          <input type="text" class="opt-input" id="opt1" placeholder="Option B" />
+        </div>
+        <div class="option-row">
+          <input type="radio" name="correctOpt" value="2" id="radio2" />
+          <input type="text" class="opt-input" id="opt2" placeholder="Option C" />
+        </div>
+        <div class="option-row">
+          <input type="radio" name="correctOpt" value="3" id="radio3" />
+          <input type="text" class="opt-input" id="opt3" placeholder="Option D" />
+        </div>
+        <p class="options-hint">Click the radio button next to the correct answer.</p>
+      </div>
+
+      <p class="error-msg hidden" id="qError">Please fill in the question, all 4 options, and mark the correct answer.</p>
+
+      <div class="btn-row">
+        <button class="btn-secondary" id="prevQBtn" onclick="prevQuestion()">← Previous</button>
+        <button class="btn-primary" id="nextQBtn" onclick="nextOrFinish()">Next →</button>
+      </div>
+
+    </div>
+
+    <!-- Sidebar: list of added questions -->
+    <div class="qlist-section">
+      <h3 class="section-title">Questions Added</h3>
+      <ul class="qlist" id="questionList">
+        <li class="qlist-empty">No questions yet.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="add_questions.js"></script>
+</body>
+</html>
